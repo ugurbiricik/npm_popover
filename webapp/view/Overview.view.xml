@@ -5,10 +5,9 @@
     xmlns:core="sap.ui.core"
 	displayBlock="true"
 >
-    <Page
-		title="Accessibility Popover" >
+    <Page class="overviewPageHeader" >
 		<headerContent>
-                <core:Icon id="bfsgButton" src="sap-icon://accessibility" press=".handlePopoverPress" size="40px"/>
+                <core:Icon id="bfsgButton" src="sap-icon://accessibility" press=".handlePopoverPress" size="40px" class="accessBtn"/>
 		</headerContent>
 		
 	</Page>

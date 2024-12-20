@@ -1,43 +1,46 @@
-html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
-	margin-right: 0.125rem
-}
-
-html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
-	margin-left: 0.125rem
-}
-
-.myAppDemoWT .myCustomText {
-	display: inline-block;
-	font-weight: bold;
-}
-
-/*	ProductRating */
-.myAppDemoWTProductRating {
-	padding: 0.75rem;
-}
-
-.myAppDemoWTProductRating .sapMRI {
-	vertical-align: initial;
-}
-
 .sapMPopover{
-    width: 250px !important;
-}
-/* .panelParent {
-    margin-bottom: 1rem;
-} */
-.iconStyle {
-    /* margin-right: 0.5rem; */
-    color: #0070f2;
+    width: 280px !important;
 }
 
-.iconStyle .sapMBtnInner {
-    border: none !important;
-    outline: none !important;
-    
+.optionsContainer{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.accessPopoverHeaderIcons .sapMBtnInner{
+	border: none;
+	outline: none;
 }
 
 .titleStyle{
     font-size: small !important;
     font-weight: 200 !important;
+}
+
+.accessPopoverContentBtn .sapMBtnContent{
+	color: black !important;
+}
+
+.accessPopoverContentBtn .sapMBtnInner{
+	border: none ;
+	outline: none ;
+	font-size: small ;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap:0px 10px;
+	width: 100%
+} 
+.accessPopoverContentBtn .sapMBtn {
+	border: none;
+	outline: none;
+	width: 100%;
+}
+
+.accessPopoverPanel .sapMPanel{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
