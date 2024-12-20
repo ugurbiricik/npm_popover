@@ -1,0 +1,16 @@
+<mvc:View
+	controllerName="ui5.walkthrough.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+	displayBlock="true"
+>
+    <Page
+		title="Accessibility Popover" >
+		<headerContent>
+                <core:Icon id="bfsgButton" src="sap-icon://accessibility" press=".handlePopoverPress" size="40px"/>
+		</headerContent>
+		
+	</Page>
+	
+</mvc:View>
