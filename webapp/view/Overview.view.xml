@@ -1,15 +1,19 @@
 <mvc:View
-	controllerName="ui5.walkthrough.controller.App"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc"
-    xmlns:core="sap.ui.core"
-	displayBlock="true"
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
 >
-    <Page class="overviewPageHeader" >
-		<headerContent>
-                <core:Icon id="bfsgButton" src="sap-icon://accessibility" press=".handlePopoverPress" size="40px" class="accessBtn"/>
-		</headerContent>
-		
-	</Page>
-	
+    <Page class="overviewPageHeader">
+        <headerContent>
+            <!-- SAP Icon yerine harici bir resim kullanımı -->
+            <Image 
+                id="bfsgButton" 
+                src="https://www.designedtoinspire.com/blog/wp-content/uploads/2019/05/accessibility-symbol.png" 
+                press=".handlePopoverPress" 
+                class="accessBtn"
+                width="65px" 
+            />
+        </headerContent>
+    </Page>
 </mvc:View>

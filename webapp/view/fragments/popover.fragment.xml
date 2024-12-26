@@ -18,43 +18,43 @@
                 
             </FlexBox>
               <!-- Sofortansicht Section -->
-            <Panel class="accessPopoverPanel">
+            <Panel>
                         <Button text="Sofortansicht" icon="sap-icon://action" class="accessPopoverContentBtn" />
              </Panel>
 
              
             
            <!-- Schriftgröße Section -->
-            <Panel expandable="true" expanded="{configModel>/schriftgrosseExpanded}">
+            <Panel expandable="true" expanded="{configModel>/schriftgrosseExpanded}" class="expandPanel">
                 <headerToolbar>
                     <OverflowToolbar>
-                        <Button text="Schriftgröße" icon="sap-icon://text" class="accessPopoverContentBtn" />
+                        <Button text="Schriftgröße" icon="sap-icon://text" class="expandBtn" />
                 </OverflowToolbar>
                 </headerToolbar>
                 <content>
-                    <StepInput min="10" value="{configModel>/fontSize}" description="px" step="1"/>
+                    <StepInput min="10" value="{configModel>/fontSize}" class="fontSizeAccess"/>
                 </content>
             </Panel>
 
             <!-- Kontrastmodus Section -->
-            <Panel expandable="true" expanded="{configModel>/kontrastmodusExpanded}">
+            <Panel expandable="true" expanded="{configModel>/kontrastmodusExpanded}" class="expandPanel">
                 <headerToolbar>
                     <OverflowToolbar>
-                        <Button text="Kontrastmodus" icon="sap-icon://light-mode" class="accessPopoverContentBtn" />
+                        <Button text="Kontrastmodus" icon="sap-icon://light-mode" class="expandBtn" />
                         <ToolbarSpacer />
                     </OverflowToolbar>
                 </headerToolbar>
             </Panel>
 
             <!-- Blaufilter aktivieren Section -->
-            <Panel expandable="true" expanded="{configModel>/blaufilterExpanded}">
+            <Panel expandable="true" expanded="{configModel>/blaufilterExpanded}" class="expandPanel">
                 <headerToolbar>
                     <OverflowToolbar>
-                        <Button text="Blaufilter aktivieren" icon="sap-icon://lightbulb" class="accessPopoverContentBtn" />
+                        <Button text="Blaufilter aktivieren" icon="sap-icon://lightbulb" class="expandBtn" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <content>
-                    <Slider min="0" max="100" value="{configModel>/blueLight}" class="sliderStyle"/>
+                    <Slider value="{configModel>/blueLight}" class="sliderStyle"/>
                 </content>
             </Panel>
             
@@ -95,7 +95,7 @@
             </Panel>
             
             <!-- Alles zurücksetzen Section -->
-            <Panel class="accessPopoverPanel">
+            <Panel>
                 <Button icon="sap-icon://refresh" text="Alles zurücksetzen" class="accessPopoverContentBtn"/>
             </Panel>
         </FlexBox>
