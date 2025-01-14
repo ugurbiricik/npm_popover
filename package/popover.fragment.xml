@@ -1,0 +1,107 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <ResponsivePopover showHeader="false" placement="Left" class="accessibilityResponsivePopover">
+        <FlexBox direction="Column" class="optionsContainer">
+
+            <!-- Font Size Begin -->
+
+            <Panel expandable="true" class="expandPanel" expanded="{configModel>/font/isExpanded}" >
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Button text="Font Size" icon="sap-icon://text" class="expandBtn" press="onFontSizePress" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                     <core:Fragment fragmentName="ui5_bfsg_popover.fragments.fontsize" type="XML" />
+                </content>
+            </Panel>
+
+            <!-- Font Size End -->
+
+            <!-- Contrast Mode Begin -->
+
+            <Panel expandable="true" class="expandPanel" expanded="{configModel>/contrast/isExpanded}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Button text="Contrast Mode" icon="sap-icon://light-mode" class="expandBtn" press="onContrastModeButtonPress" />
+                        <ToolbarSpacer />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                    <core:Fragment fragmentName="ui5_bfsg_popover.fragments.contrastmode" type="XML" />
+
+                </content>
+            </Panel>
+           
+
+            <!-- Contrast Mode End -->
+
+            <!-- Activate BLue Filter Begin -->
+
+            <Panel expandable="true" class="expandPanel" expanded="{configModel>/blueFilter/blaufilterExpanded}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Button text="{= ${configModel>/blueFilter/isActive} ? 'Deactivate Blue Filter' : 'Activate Blue Filter'}" icon="sap-icon://lightbulb" press="onButtonBlueFilterPress" class="expandBtn" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                    <VBox class="blueFilterContainer">
+                        <Text text="Intensity" class="intensityLabel" />
+                        <Slider value="{configModel>/blueFilter/blueFilterIntensity}" liveChange="onBlueFilterIntensitySliderLiveChange" class="blueFilterSlider" />
+                        <Text text="{= ${configModel>/blueFilter/blueFilterIntensity} + '%'}" class="intensityValue" />
+                    </VBox>
+                </content>
+            </Panel>
+
+            <!-- Activate BLue Filter End -->
+
+        
+
+            <!-- Read Website Begin -->
+
+            <Panel expandable="true"  class="expandPanel" expanded="{configModel>/readWebsite/isExpanded}" >
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Button text="Read Website" icon="sap-icon://sound-loud"  class="expandBtn" press="onReadWebsitePress" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                    <core:Fragment fragmentName="ui5_bfsg_popover.fragments.readwebsite" type="XML" />
+                </content>
+            </Panel>
+
+
+            <!-- Read Website End -->
+
+            <!-- Night Mode Begin -->
+
+            <Panel>
+                <Button text="Night Mode" icon="sap-icon://bed" class="accessPopoverContentBtn" press="onNightModeButtonPress" />
+
+            </Panel>
+
+            <!-- Night Mode End -->
+
+            <!-- Tab Navigation Begin -->
+
+            <Panel>
+                <Button icon="sap-icon://keyboard-and-mouse" text="Tab Navigation" class="accessPopoverContentBtn" press="onTabNavigationButtonPress"/>
+
+            </Panel>
+
+            <!-- Tab Navigation End -->
+            
+             <!-- Hide Images Begin -->
+
+            <Panel>
+                <Button icon="sap-icon://hide" text="Hide Images" class="accessPopoverContentBtn" press="onHideImagesButtonPress"/>
+
+            </Panel>
+
+            <!-- Hide Images End -->
+            </FlexBox>
+        <endButton>
+            <Button text="Close" press="onClose" />
+        </endButton>
+    </ResponsivePopover>
+</core:FragmentDefinition>

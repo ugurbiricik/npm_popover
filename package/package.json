@@ -1,0 +1,21 @@
+{
+  "name": "ui5_bfsg_popover",
+  "version": "0.3.1",
+  "description": "SAPUI5 Popover to fullfil BFSG requirements",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "OpenUI5",
+    "UI5",
+    "SAPUI5",
+    "BFSG"
+  ],
+  "author": "Abics GmbH",
+  "license": "ISC",
+  "dependencies": {
+    "@openui5/sap.m": "^1.131.1",
+    "@openui5/sap.ui.core": "1.131.1"
+  }
+}
